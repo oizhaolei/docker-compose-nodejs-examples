@@ -8,4 +8,8 @@ web:
     - "db:redis"
 
 db:
-  image: redis
+  image: redis:latest
+  command: redis-server --appendonly yes
+  volumes:
+  - ./data:/data
+
