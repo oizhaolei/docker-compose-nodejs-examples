@@ -1,7 +1,7 @@
 admin:
-  build: ./app
+  build: ./admin
   volumes:
-    - "./app:/src/app"
+    - "./admin:/src/app"
   ports:
     - "3030:3000"
   links:
@@ -10,9 +10,9 @@ admin:
   command: nodemon -L app/bin/www
 
 wx:
-  build: ./app
+  build: ./wx
   volumes:
-    - "./app:/src/app"
+    - "./wx:/src/app"
   ports:
     - "3031:3000"
   links:
